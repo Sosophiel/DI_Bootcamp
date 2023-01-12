@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+
+  }
+   h1 {
+    color: black; 
+    font-size: 70px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+
+  .hero-image {
+    background-image: url("Thor_pic.jpg");
+    background-color: #cccccc;
+    height: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: left;
+    position: absolute;
+    color: black;
+    width: 800px;
+    margin-left: 100px;
+   padding-top: 500px;
+  }
+
+  .hero-text > p { 
+    width: 300px;
+}
+ 
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #0d1c6d ;
+  }
+
+  .active {
+    background-color: #0d1c6d ;
+  }
