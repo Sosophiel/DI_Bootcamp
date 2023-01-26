@@ -48,7 +48,7 @@ calculateTip()
 
 //exercise3
 
- function isDivisible(divisor) {
+/*  function isDivisible(divisor) {
           
     let sum = 0
     for (let i=0; i<=500; i++)
@@ -103,4 +103,99 @@ function myBill() {
 }
 
 let result = myBill()
+console.log(result) */
+
+
+//exercise 5
+
+/* function changeEnough(itemPrice, amountOfChange) {
+
+    let total = 0
+    let changeValue = [0.25, 0.10, 0.05, 0.01]
+
+
+    for (let i = 0; i < amountOfChange.length; i++) {
+
+        total = total + amountOfChange[i] * changeValue [i]  
+        
+    }
+    console.log(total)
+
+    if (total >= itemPrice) {
+        return true
+    }
+    else
+   {
+   return false
+   }
+}
+
+let result = changeEnough(4.25, [25, 20, 5, 0])
+
+console.log(result) 
+
+let result = changeEnough(14.11, [2,100,0,0])
+
 console.log(result)
+
+ */
+
+//Exercise 6 :
+
+
+function hotelCost() {
+
+    let priceHotel;
+    let userAnswerHotel = prompt("How many nights would you like to stay");
+    
+    while (isNaN(userAnswerHotel) || userAnswerHotel === null) {
+        userAnswerHotel = prompt("How many night will you like to stay");
+    } 
+    
+    priceHotel = Number(userAnswerHotel)*140;
+    return priceHotel;
+}
+
+
+function planeRideCost() {
+    let userAnswerPlane = prompt("Where do you want to go").toLowerCase();
+    
+    while (userAnswerPlane === null || !isNaN(userAnswerPlane)) {
+        userAnswerPlane = prompt("Where do you want to go").toLowerCase();
+    }
+
+    if(userAnswerPlane === "paris"){
+        return 220;
+    } else if (userAnswerPlane === "london") {
+        return 183;
+    } else {
+        return 300;
+    }
+}
+
+function rentalCarCost() {
+    let userAnswerRent = prompt("How many days would you rent the car ?");
+    
+    while (isNaN(userAnswerRent) || userAnswerRent === null) {
+        userAnswerRent = prompt("How many days would you rent the car ?");
+    } 
+
+   let price = userAnswerRent * 40
+   if(userAnswerRent >= 10) {
+        price = userAnswerRent * 40 * 0.05
+   }
+
+   return price
+}
+
+function totalVacationCost () {
+    const hotel = hotelCost();
+    const plane = planeRideCost();
+    const car = rentalCarCost();
+    const total = hotel + plane + car;
+    console.log(`The car cost: $${car}, the hotel cost: $${hotel}, the plane tickets cost: $${plane}. `);
+}
+
+totalVacationCost() 
+
+/* Bonus: Instead of using a prompt inside the 3 first functions, only use a prompt inside the totalVacationCost() function. You need to change the 3 first functions, accordingly. */
