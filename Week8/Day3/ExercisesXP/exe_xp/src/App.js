@@ -38,19 +38,21 @@ class App extends React.Component {
       </p>
       <hr />
       <ErrorBoundary>
-        <p>These one counter is inside the same error boundary</p>
-        <BuggyCounter />
-      </ErrorBoundary>
-      <hr />
-      <ErrorBoundary>
         <p>These two counters are inside the same error boundary. If one crashes, the error boundary will replace both of them.</p>
         <BuggyCounter />
         <BuggyCounter />
       </ErrorBoundary>
       <hr />
-      <p>These two counters are each inside of their own error boundary. So if one crashes, the other is not affected.</p>
-      <ErrorBoundary><BuggyCounter /></ErrorBoundary>
-      <ErrorBoundary><BuggyCounter /></ErrorBoundary>
+        <p>These two counters are each inside of their own error boundary. So if one crashes, the other is not affected.</p>
+      <ErrorBoundary>
+        <BuggyCounter />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <BuggyCounter />
+      </ErrorBoundary>
+      <hr />
+      <p>This counter is not inside of boundary. So if crashes, all other components are deleted.</p>
+      <BuggyCounter />
 
       <h1>Exercise 2</h1>
       <Color/>
