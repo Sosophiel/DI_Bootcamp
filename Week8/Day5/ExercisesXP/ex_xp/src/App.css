@@ -1,0 +1,30 @@
+body {
+  background-color: #eee;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-weight: normal;
+  color: rgba(0,0,0,0.87);
+}
+
+h1 {
+  text-align: center;
+  color: #2196f3;
+  font-size: 4,2rem;
+  line-height: 110%;
+  font-weight: 400;
+}
+
+.container {
+  width: 700px;
+  margin: auto;
+}
+
+p {
+  background-color: white;
+  padding: 0.5rem;
+  margin: 0.1rem;
+  cursor: pointer;
+}
+
+
+
